@@ -15,12 +15,12 @@ export default class ProductPage extends React.Component {
     if (!product) {
       return <NotFoundPage/>;
     }
-    const headerStyle = { backgroundImage: `url(/img/${product.cover})` };
+    // const headerStyle = { backgroundImage: `url(${product.cover})` };
     return (
       <div className="product-full">
         <ProductMenu products={products}/>
         <div className="product">
-          <header style={headerStyle}/>
+          {/* <header style={headerStyle}/> */}
           <div className="picture-container">
             <img src={product.image}/>
             <h2 className="name">{product.name}</h2>

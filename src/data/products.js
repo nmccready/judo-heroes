@@ -7,7 +7,7 @@ export default [
     'price': '999',
     'color': 'black',
     'image': '/img/djiMavicPro.jpg',
-    'cover': '/img/mavic-pro.jpg',
+    'cover': '/img/djiMavicPro.jpg',
     'link': 'https://www.google.com/shopping/product/11719376778390605651?sclient=psy-ab&rlz=1C5CHFA_enUS735&biw=2560&bih=979&q=drones&oq=&pbx=1&bav=on.2,or.r_cp.&bvm=bv.149397726,d.amc&sns=1&pf=p&tch=1&ech=9&psi=QcLGWPKtFYHWjwTYooP4CQ.1489420866800.5&sa=X&sqi=2&ved=0ahUKEwjT2ICc7dPSAhUn6IMKHSDLDzcQ8gIIpwUwAA',
     'description': "Wherever You Go The DJI MavIc Pro Is a small yet powerful drone that turns the sky Into your creat - Ive canvass eas - Ily and w - Ithout worry, help - Ing you make every moment an aer - Ial moment. Its compact s - Ize h - Ides a h - Igh degree of complex - Ity that makes It one o.quadcopter, aer - Ial photography. - IOS dev - Ice compatIbIlIty.11.4 x 7.1 x 9.4''. The DJI MavIc Pro folds down as small as a bottle of water, mak - Ing It small enough to br - Ing w - Ith you everywhere.. - Sync transmIssIon system offers up to 4.3 m - Iles (7km) of transmIssIon range. Fly at up to 40mph (64kmh) or for as long as 27-mInutes.. ActIveTrack, Tap - Fly and other smart features make profess - Ional look - Ing v - Ideo effortless. True 4K, fully stabIlIzed ensures smooth footage. - Idance comb - Ined w - Ith sensor redundancy Increases fl - Ight safety and relIabIlIty.. VIsIon posItIonIng pa - Ired w - Ith GPS and GLONASS ensures prec - Ise posItIonIng Indoor and outdoors."
   },
