@@ -1,4 +1,4 @@
-# judo-heroes
+# react-server-boilerplate
 A simple application built to showcase Universal JavaScript with Node.js and React.
 
 ## The tutorial
@@ -17,7 +17,7 @@ If you want to know more about Universal Javascript and improve your application
 ## Contributing
 Everyone is very welcome to contribute to this project.
 You can contribute just by submitting bugs or suggesting improvements by
-[opening an issue](https://github.com/lmammino/judo-heroes/issues) or by [sending a pull request](https://github.com/lmammino/judo-heroes/pulls).
+[opening an issue](https://github.com/lmammino/react-server-boilerplate/issues) or by [sending a pull request](https://github.com/lmammino/react-server-boilerplate/pulls).
 
 ## License
 Licensed under [MIT License](LICENSE). © Luciano Mammino.

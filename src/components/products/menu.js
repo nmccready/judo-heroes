@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-export default class AthletesMenu extends React.Component {
+export default class ProductMenu extends React.Component {
   render() {
     return (
       <nav className="athletes-menu">

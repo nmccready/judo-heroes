@@ -1,9 +1,9 @@
 {
-  "name": "judo-heroes",
+  "name": "react-server-boilerplate",
   "version": "1.0.0",
   "description": "Simple application to showcase how to achieve universal rendering and routing with React and Express.",
   "main": "src/server.js",
-  "repository": "git@github.com:lmammino/judo-heroes.git",
+  "repository": "git@github.com:lmammino/react-server-boilerplate.git",
   "scripts": {
     "start": "cross-env NODE_ENV=production node_modules/.bin/babel-node --presets react,es2015 src/server.js",
     "start-dev": "npm run start-dev-hmr",

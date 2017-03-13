@@ -8,9 +8,9 @@ export default class Layout extends React.Component {
     return (
       <div className="app-container">
         <header>
-          <Link to="/">
-            <img className="logo" src="/img/logo-judo-heroes.png"/>
-          </Link>
+          {/* <Link to="/">
+            <img className="logo" src="/img/logo-react-server-boilerplate.png"/>
+          </Link> */}
         </header>
         <div className="app-content">{this.props.children}</div>
         <footer>
@@ -24,7 +24,7 @@ export default class Layout extends React.Component {
 
           <p>
             Built with <strong>❤</strong>︎ and <strong>code</strong> by <a href="http://loige.co" target="_blank">loige</a>.
-            Contribute on <a href="https://github.com/lmammino/judo-heroes">GitHub</a> or
+            Contribute on <a href="https://github.com/nmcready/react-server-boilerplate">GitHub</a> or
             read the tutorial on <a href="https://scotch.io/tutorials/react-on-the-server-for-beginners-build-a-universal-react-and-node-app">Scotch.io</a>
           </p>
         </footer>

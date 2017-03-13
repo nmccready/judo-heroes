@@ -61,29 +61,29 @@ footer p {
   font-weight: bold;
 }
 
-.home .athletes-selector {
+.home .products-selector {
   clear: both;
   padding: 2em;
   text-align: center;
 }
 
-.home .athletes-selector .athlete-preview {
+.home .products-selector .product-preview {
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   display: inline-block;
   margin: 0 1em 1em 0;
   max-width: 200px;
   padding: 0;
-  position: relative;
+  /*position: relative;*/
   width: 100%;
 }
 
-.home .athletes-selector .athlete-preview img {
-  margin: 0;
+.home .products-selector .product-preview img {
+  margin: auto;
   width: 100%;
 }
 
-.home .athletes-selector .athlete-preview .name {
+.home .products-selector .product-preview .name {
   color: #030303;
   display: inline-block;
   font-size: 1.6em;
@@ -96,7 +96,7 @@ footer p {
   width: 100%;
 }
 
-.home .athletes-selector .athlete-preview .medals-count {
+.home .products-selector .product-preview .medals-count {
   background: #fff;
   border-radius: 2px;
   display: inline-block;
