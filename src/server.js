@@ -8,6 +8,7 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routesFactory from './routes';
 import NotFoundPage from './components/notFoundPage';
+import MobileDetect from './extensions/mobileDetect';
 
 // initialize the server and configure support for ejs templates
 const app = new Express();
@@ -32,9 +33,14 @@ app.get(/^\/(?!api).*/, (req, res) => {
   console.log(req.path + ' route: *');
 
   const config = getRouteConfig(req);
-
   const routes = routesFactory(config);
-  console.log({routes});
+  const {headers} = req;
+
+  const mobileDetect = new MobileDetect(headers['user-agent']);
+  console.log('mobileDetect: mobile', mobileDetect.mobile());
+  console.log('mobileDetect: isMobile', mobileDetect.isMobile());
+  console.log('mobileDetect: isPhone', mobileDetect.isPhone());
+  console.log('mobileDetect: isTablet', mobileDetect.isTablet());
 
   match(
     { routes, location: req.url },
