@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  devtool: debug ? 'inline-sourcemap' : null,
+  devtool: 'inline-sourcemap', //debug ? 'inline-sourcemap' : null,
   entry: path.join(__dirname, 'src', 'app-client.js'),
   devServer: {
     inline: true,
@@ -27,7 +27,7 @@ module.exports = {
       loader: ['babel-loader'],
       query: {
         cacheDirectory: 'babel_cache',
-        presets: debug ? ['react', 'es2015', 'react-hmre'] : ['react', 'es2015']
+        presets: debug ? ['react', 'es2015'] : ['react', 'es2015'] //'react-hmre'
       }
     }]
   },

@@ -6,7 +6,7 @@ import Express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import routes from './routes';
+import routesFactory from './routes';
 import NotFoundPage from './components/notFoundPage';
 
 // initialize the server and configure support for ejs templates
@@ -18,8 +18,24 @@ app.set('views', path.join(__dirname, 'views'));
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, 'static')));
 
+function getRouteConfig(req) {
+  return {
+    lazyLoadOpts: {
+      offsetVertical: 150,
+      lazyHeight: 200
+    }
+  };
+}
+
 // universal routing and rendering
-app.get('*', (req, res) => {
+app.get(/^\/(?!api).*/, (req, res) => {
+  console.log(req.path + ' route: *');
+
+  const config = getRouteConfig(req);
+
+  const routes = routesFactory(config);
+  console.log({routes});
+
   match(
     { routes, location: req.url },
     (err, redirectLocation, renderProps) => {
@@ -46,9 +62,15 @@ app.get('*', (req, res) => {
       }
 
       // render the index template with the embedded React markup
-      return res.render('index', { markup });
+      return res.render('index', { markup,  config: JSON.stringify(config)});
     }
   );
+});
+
+app.get('/api/config/route', (req, res, next) => {
+  console.log(req.path + ' route: api/config/route');
+  res.json(getRouteConfig(req))
+  next()
 });
 
 // start the server
