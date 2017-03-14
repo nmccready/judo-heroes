@@ -21,8 +21,8 @@ app.use(Express.static(path.join(__dirname, 'static')));
 function getRouteConfig(req) {
   return {
     lazyLoadOpts: {
-      offsetVertical: 150,
-      lazyHeight: 200
+      offsetVertical: 300,
+      lazyHeight: 500
     }
   };
 }

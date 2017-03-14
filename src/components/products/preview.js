@@ -2,7 +2,27 @@
 
 import React from 'react';
 import { Link } from 'react-router';
-import LazyLoad from 'react-lazyload';
+/* tried react-lazy: w/ no luck
+  considered due to:
+  - IE support and
+  - checkElementsInViewPort (ultra lazy eval); useful for resize
+  - onLoad callback prop
+*/
+/*
+  LazyLoad options: https://github.com/loktar00/react-lazy-load
+  - offsetVertical
+  - offsetHorizontal
+  - offsetTop
+  - offsetBottom
+  - offsetLeft
+  - offsetRight
+  - throttle
+  - debounce
+  - height: hardcoded/injected element size used for calculating when the element is in view (speeds up the process and avoids warning of dynamic calculation)
+  - width
+  - onContentVisible: callback prop to notify that an element has been made visible
+*/
+import LazyLoad from 'react-lazyload'; // also supports IE 8 +
 import _ from 'lodash';
 
 export default class ProductPreview extends React.Component {
@@ -31,7 +51,7 @@ export default class ProductPreview extends React.Component {
     return (
       <Link to={`/product/${this.props.id}`}>
         <div className="product-preview">
-          <LazyLoad once offsetVertical={300} height={500} >
+          <LazyLoad once offsetVertical={offsetVertical} height={lazyHeight} >
             <img src={this.props.image}/>
           </LazyLoad>
           <h2 className="name">{this.props.name}</h2>
