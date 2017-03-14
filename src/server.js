@@ -8,7 +8,7 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routesFactory from './routes';
 import NotFoundPage from './components/notFoundPage';
-import MobileDetect from './extensions/mobileDetect';
+import { getRouteConfig } from './routeConfig'
 
 // initialize the server and configure support for ejs templates
 const app = new Express();
@@ -19,28 +19,18 @@ app.set('views', path.join(__dirname, 'views'));
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, 'static')));
 
-function getRouteConfig(req) {
-  return {
-    lazyLoadOpts: {
-      offsetVertical: 300,
-      lazyHeight: 500
-    }
-  };
-}
-
 // universal routing and rendering
 app.get(/^\/(?!api).*/, (req, res) => {
   console.log(req.path + ' route: *');
 
   const config = getRouteConfig(req);
+
+  console.log("@@@@ config @@@")
+  console.log(config);
+  
   const routes = routesFactory(config);
   const {headers} = req;
 
-  const mobileDetect = new MobileDetect(headers['user-agent']);
-  console.log('mobileDetect: mobile', mobileDetect.mobile());
-  console.log('mobileDetect: isMobile', mobileDetect.isMobile());
-  console.log('mobileDetect: isPhone', mobileDetect.isPhone());
-  console.log('mobileDetect: isTablet', mobileDetect.isTablet());
 
   match(
     { routes, location: req.url },
