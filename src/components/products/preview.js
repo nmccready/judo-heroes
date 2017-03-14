@@ -27,16 +27,16 @@ import _ from 'lodash';
 
 export default class ProductPreview extends React.Component {
 
-  componentDidMount(){
-    console.log('ProductPreview mounted: ' + this.props.id);
-  }
-
-  componentDidUpdate(){
-    console.log('ProductPreview updated: ' + this.props.id);
-  }
+  // componentDidMount(){
+  //   console.log('ProductPreview mounted: ' + this.props.id);
+  // }
+  //
+  // componentDidUpdate(){
+  //   console.log('ProductPreview updated: ' + this.props.id);
+  // }
 
   render() {
-    console.log("@@@@@ ProductPreview @@@@@")
+    // console.log("@@@@@ ProductPreview @@@@@")
     // console.log(this.props);
 
     const {lazyLoadOpts} = this.props;

@@ -131,7 +131,7 @@ footer p {
   text-align: center;
 }
 
-.home .products-selector .product-preview {
+.home .products-selector .product-preview, .home .tracks-selector .track-preview {
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   display: inline-block;
@@ -142,12 +142,12 @@ footer p {
   width: 100%;
 }
 
-.home .products-selector .product-preview img {
+.home .products-selector .product-preview img, .home .tracks-selector .track-preview img {
   margin: auto;
   width: 100%;
 }
 
-.home .products-selector .product-preview .name {
+.home .products-selector .product-preview .name, .home .tracks-selector .track-preview .name {
   color: #030303;
   display: inline-block;
   font-size: 1.6em;
@@ -160,7 +160,7 @@ footer p {
   width: 100%;
 }
 
-.home .products-selector .product-preview .medals-count {
+.home .products-selector .product-preview .medals-count, .home .tracks-selector .track-preview .medals-count {
   background: #fff;
   border-radius: 2px;
   display: inline-block;
@@ -174,7 +174,7 @@ footer p {
   vertical-align: middle;
 }
 
-nav.athletes-menu {
+nav.products-menu, nav.tracks-menu{
   margin: 0 auto;
   max-width: 800px;
   padding: 2em;
@@ -182,12 +182,12 @@ nav.athletes-menu {
   width: 100%;
 }
 
-nav.athletes-menu a {
+nav.products-menu a, nav.tracks-menu a {
   font-size: 1.6em;
   margin: 0 1em 1em 0;
 }
 
-nav.athletes-menu a.active {
+nav.products-menu a.active, nav.tracks-menu a.active {
   color: #030303;
   text-decoration: none;
 }

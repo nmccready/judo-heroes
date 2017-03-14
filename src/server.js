@@ -27,10 +27,8 @@ app.get(/^\/(?!api).*/, (req, res) => {
 
   console.log("@@@@ config @@@")
   console.log(config);
-  
-  const routes = routesFactory(config);
-  const {headers} = req;
 
+  const routes = routesFactory(config);
 
   match(
     { routes, location: req.url },
