@@ -5,8 +5,8 @@ function getLazyLoadConfig(userAgent){
   const mobileDetect = new MobileDetect(userAgent),
     config = {
       lazyLoadOpts: {
-        offsetVertical: 30,
-        lazyHeight: 100
+        offset: 30,
+        height: 100
       }
     };
 
@@ -19,12 +19,12 @@ function getLazyLoadConfig(userAgent){
     return config;
 
   if(mobileDetect.isPhone()){
-    config.lazyLoadOpts.offsetVertical = 300;
-    config.lazyLoadOpts.lazyHeight = 500;
+    config.lazyLoadOpts.offset = 300;
+    config.lazyLoadOpts.height = 500;
   }
   else {
-    config.lazyLoadOpts.offsetVertical = 150;
-    config.lazyLoadOpts.lazyHeight = 250;
+    config.lazyLoadOpts.offset = 150;
+    config.lazyLoadOpts.height = 250;
   }
 
   return config;
