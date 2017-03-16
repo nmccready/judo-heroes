@@ -61,11 +61,6 @@ app.get(/^\/(?!api).*/, (req, res) => {
   );
 });
 
-app.get('/api/config/route', (req, res, next) => {
-  console.log(req.path + ' route: api/config/route');
-  res.json(getRouteConfig(req))
-  next()
-});
 
 // start the server
 const port = process.env.BOILER_PORT || 4000;
